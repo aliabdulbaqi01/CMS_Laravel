@@ -17,6 +17,7 @@
                     <form action="{{route('admin.profile.update')}}" method="post"
                     enctype="multipart/form-data">
                         @csrf
+                        @method('PUT')
                         <div class="row mb-3">
                             <label for="name" class="col-sm-2 col-form-label">Name</label>
                             <div class="col-sm-10">

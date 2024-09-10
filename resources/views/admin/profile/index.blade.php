@@ -7,7 +7,7 @@
         <div class="col-lg-6">
             <div class="card">
                 <center>
-                <img class="rounded-circle avatar-xl " src="{{$user->image ? asset($user->image) : url('uploads/no_image.jpg')}}" alt="Profile Image">
+                <img class="rounded-circle avatar-xl mt-4 " src="{{$user->image ? asset($user->image) : url('uploads/no_image.jpg')}}" alt="Profile Image">
                 </center>
                   <div class="card-body">
                       <h4 class="card-title">Name: {{$user->name}}</h4>

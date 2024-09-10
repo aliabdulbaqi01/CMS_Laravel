@@ -24,6 +24,6 @@ Route::get('logout', [AdminController::class, 'destroy'])->name('logout');
 // Profile
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
 Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
-Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 // Slider
 Route::resource('slides', SliderController::class)->only(['index']);

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,8 @@ Route::get('/dashboard', function () {
 
 Route::get('logout', [AdminController::class, 'destroy'])
     ->name('logout');
+
+/*
+ * slider  route
+ */
+Route::resource('slides', SliderController::class)->only(['index']);

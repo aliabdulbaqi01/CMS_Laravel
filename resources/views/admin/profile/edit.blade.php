@@ -2,6 +2,11 @@
 @section('title')
     Edit Profile
 @endsection
+@push('css')
+    // jquery
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+@endpush
 @section('content')
     <div class="row">
         <div class="col-12">
@@ -40,7 +45,7 @@
                             <label for="image" class="col-sm-2 col-form-label"></label>
 
                             <div class="col-sm-10">
-                                <img class="rounded avatar-lg " src="{{$user->image ? asset($user->image) : url('uploads/no_image.jpg')}}" alt="Profile Image">
+                                <img class="rounded avatar-lg " id="showImage" src="{{$user->image ? asset($user->image) : url('uploads/no_image.jpg')}}" alt="Profile Image">
                             </div>
                         </div>
                         <button type="submit" class="btn btn-rounded btn-info waves-light waves-effect">Update Profile</button>
@@ -51,3 +56,16 @@
         </div> <!-- end col -->
     </div>
 @endsection
+@push('js')
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#image').change(function (e) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#showImage').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
+        });
+    </script>
+@endpush

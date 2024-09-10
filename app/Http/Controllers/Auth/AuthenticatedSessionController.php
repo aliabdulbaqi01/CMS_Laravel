@@ -29,7 +29,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->intended(RouteServiceProvider::Dashboard);
     }
 
     /**
@@ -43,6 +43,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
+        toastr()->warning('You have been logged out.');
         return redirect('/');
     }
 }

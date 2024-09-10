@@ -31,6 +31,10 @@
     <!-- App Css-->
     <link href="{{asset('backend')}}/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css"/>
 
+    {{--    toaster CSS--}}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+
     {{--    CSS for specific file --}}
     @stack('css')
 </head>
@@ -104,10 +108,24 @@
 <script src="{{asset('backend')}}/assets/js/pages/dashboard.init.js"></script>
 
 <!-- App js -->
-<script src="{{asset('backend')}}/assets/js/app.js"></script>
+<script src="{{asset('backend/assets/js/app.js')}}"></script>
+
+{{-- toaster Js--}}
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+@if($errors->any())
+    @foreach($errors->all() as $error)
+        @php
+            toastr()->error($error)
+        @endphp
+    @endforeach
+@endif
+
 
 {{-- Js for specific files --}}
 @stack('js')
+
+
 </body>
 
 </html>

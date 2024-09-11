@@ -24,13 +24,7 @@ class SliderController extends Controller
     }
 
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -42,7 +36,7 @@ class SliderController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the slide in storage.
      */
     public function update(Request $request,Slide $slide)
     {

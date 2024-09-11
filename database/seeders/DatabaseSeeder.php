@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             SlideSeeder::class,
+            AboutsSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
 

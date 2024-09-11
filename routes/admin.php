@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\backend\AboutController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\PasswordController;
 use App\Http\Controllers\Backend\ProfileController;
@@ -34,3 +35,8 @@ Route::put('/password', [PasswordController::class, 'update'])->name('password.u
 // Slider
 Route::get('/slides/edit', [SliderController::class, 'edit'])->name('slides.edit');
 Route::put('/slides/{slide}', [SliderController::class, 'update'])->name('slides.update');
+
+// about
+Route::get('/abouts/edit',[AboutController::class, 'edit'])->name('abouts.edit');
+Route::put('/abouts/{about}', [AboutController::class, 'update'])->name('abouts.update');
+

@@ -34,7 +34,15 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('admin.slides.edit')}}">Home Slide</a></li>
-                        <li><a href="email-read.html">Read Email</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>About Page Setup</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('admin.abouts.edit')}}">About Page</a></li>
                     </ul>
                 </li>
 

@@ -12,7 +12,7 @@ class Slide extends Model
     protected $fillable = [
         'title',
         'short_title',
-        'home_slide',
+        'image',
         'video_url',
         ];
 }

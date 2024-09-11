@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('slides', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('short-title')->nullable();
-            $table->string('home_slide')->nullable();
+            $table->string('short_title')->nullable();
+            $table->string('image')->nullable();
             $table->string('video_url')->nullable();
             $table->timestamps();
         });

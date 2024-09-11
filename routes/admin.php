@@ -27,8 +27,10 @@ Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index
 Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
+// change password
 Route::get('/password/edit', [PasswordController::class, 'edit'])->name('password.edit');
 Route::put('/password', [PasswordController::class, 'update'])->name('password.update');
-// change password
+
 // Slider
-Route::resource('slides', SliderController::class)->only(['index']);
+Route::get('/slides/edit', [SliderController::class, 'edit'])->name('slides.edit');
+Route::put('/slides', [SliderController::class, 'update'])->name('slides.update');

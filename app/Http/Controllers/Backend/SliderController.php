@@ -15,26 +15,11 @@ class SliderController extends Controller
     {
         // return all data from the slider
         // and return the view with the data
-        $sliders = Slide::all();
-        return view('admin.pages.slide.index', compact('sliders'));
+        $slides = Slide::get()->first();
+        return view('admin.pages.slide.index', compact('slides'));
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
@@ -47,17 +32,18 @@ class SliderController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit()
     {
-        //
+        $slides = Slide::get()->first();
+        return view('admin.pages.slide.edit', compact('slides'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**

@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Slide;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 
 class SliderController extends Controller
 {
@@ -41,9 +44,29 @@ class SliderController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request)
+    public function update(Request $request,Slide $slide)
     {
-        dd($request->all());
+        if ($request->hasFile('image')) {
+            if (File::exists(public_path($slide->image))) {
+                File::delete(public_path($slide->image));
+            }
+
+            $image = $request->file('image');
+            $imageName = uniqid() . '_' . $image->getClientOriginalName();
+            $path = 'uploads/frontend_images/' . $imageName;
+            $manager = new ImageManager(new Driver());
+            $imageManager = $manager->read($image);
+
+            $imageManager->resize(636,852)->save(public_path($path));
+
+            // update the slide
+            $slide->image = $path;
+        }
+        $slide->update($request->except('image'));
+        $slide->save();
+
+        toastr()->success('slide updated successfully');
+        return redirect()->back();
     }
 
     /**

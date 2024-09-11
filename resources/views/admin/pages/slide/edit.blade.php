@@ -14,7 +14,7 @@
                 <div class="card-body">
 
                     <h4 class="card-title mb-4" >Edit Slide Section</h4>
-                    <form action="{{route('admin.slides.update')}}" method="post"
+                    <form action="{{route('admin.slides.update', $slides->id)}}" method="post"
                     enctype="multipart/form-data">
                         @csrf
                         @method('PUT')

@@ -33,4 +33,4 @@ Route::put('/password', [PasswordController::class, 'update'])->name('password.u
 
 // Slider
 Route::get('/slides/edit', [SliderController::class, 'edit'])->name('slides.edit');
-Route::put('/slides', [SliderController::class, 'update'])->name('slides.update');
+Route::put('/slides/{slide}', [SliderController::class, 'update'])->name('slides.update');

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\backend\AboutController;
+use App\Http\Controllers\Backend\AboutImageController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\PasswordController;
 use App\Http\Controllers\Backend\ProfileController;
@@ -39,4 +40,7 @@ Route::put('/slides/{slide}', [SliderController::class, 'update'])->name('slides
 // about
 Route::get('/abouts/edit',[AboutController::class, 'edit'])->name('abouts.edit');
 Route::put('/abouts/{about}', [AboutController::class, 'update'])->name('abouts.update');
+
+// about image
+Route::resource('about/images', AboutImageController::class)->only(['store', 'create',]);
 

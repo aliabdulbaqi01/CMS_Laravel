@@ -43,6 +43,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('admin.abouts.edit')}}">About Page</a></li>
+                        <li><a href="{{route('admin.images.create')}}">About Images</a></li>
                     </ul>
                 </li>
 

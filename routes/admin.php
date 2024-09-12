@@ -4,6 +4,7 @@ use App\Http\Controllers\backend\AboutController;
 use App\Http\Controllers\Backend\AboutImageController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\PasswordController;
+use App\Http\Controllers\backend\PortfolioController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\SliderController;
 use Illuminate\Support\Facades\Route;
@@ -44,3 +45,5 @@ Route::put('/abouts/{about}', [AboutController::class, 'update'])->name('abouts.
 // about image
 Route::resource('about/images', AboutImageController::class)->only(['store', 'create',]);
 
+// portfolio
+Route::resource('/portfolios', PortfolioController::class)->only(['index', 'create',]);

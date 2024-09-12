@@ -1,16 +1,11 @@
-// upload the multiple image in about page at a time
-    - model Image
-    - migration images
-        - image
-
-Image Controller
-
-// View
-    - add image
-        - input should have multiple="" attribute so you can add multiple image at once
-        - image name="image[]"
-
-
-
+// migration
+// model
+// controller  =>
+    - index
+    - create
+    - edit
+// routes
+// view
+// add in sidebar
 
 

@@ -52,9 +52,11 @@
 
                                 <td>
                                     <a href="{{ route('admin.portfolios.edit',$portfolio->id) }}" class="btn btn-info sm" title="Edit Data">  <i class="fas fa-edit"></i> </a>
-
-                                    <a href="{{ route('admin.portfolios.destroy',$portfolio->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete">  <i class="fas fa-trash-alt"></i> </a>
-
+                                    <form action="{{ route('admin.portfolios.destroy',$portfolio->id) }}" method="post" style="display: inline-block">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger sm" title="Delete Data" id="delete"> <i class="fas fa-trash-alt">Delete</i></button>
+                                    </form>
                                 </td>
 
                             </tr>

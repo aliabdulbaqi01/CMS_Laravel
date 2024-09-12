@@ -15,7 +15,7 @@
 
                     <h4 class="card-title">Create new portfolio </h4>
 
-                    <form method="post" action="{{ route('admin.portfolios.create') }}" enctype="multipart/form-data">
+                    <form method="post" action="{{ route('admin.portfolios.store') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="row mb-3">
                             <label for="name" class="col-sm-2 col-form-label">Name</label>
@@ -38,9 +38,7 @@
                         <div class="row mb-3">
                             <label for="description" class="col-sm-2 col-form-label"> Description </label>
                             <div class="col-sm-10">
-      <textarea id="elm1" name="description" class="form-control">
-          {{old('description')}}
-      </textarea>
+      <textarea id="elm1" name="description" class="form-control">{{old('description')}}</textarea>
                             </div>
                         </div>
                         <!-- end row -->

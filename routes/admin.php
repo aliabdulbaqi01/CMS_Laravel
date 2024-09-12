@@ -46,4 +46,4 @@ Route::put('/abouts/{about}', [AboutController::class, 'update'])->name('abouts.
 Route::resource('about/images', AboutImageController::class)->only(['store', 'create',]);
 
 // portfolio
-Route::resource('/portfolios', PortfolioController::class)->only(['index', 'create',]);
+Route::resource('/portfolios', PortfolioController::class)->except('show');

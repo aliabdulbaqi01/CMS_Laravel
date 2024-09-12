@@ -54,6 +54,14 @@ class PortfolioController extends Controller
         return redirect()->route('admin.portfolios.index');
     }
 
+    /**
+     * Show portfolio in the frontend
+     */
+    public function show(Portfolio $portfolio) {
+
+        return view('frontend.portfolio_detail', compact('portfolio'));
+    }
+
 
     /**
      * Show the form for editing the specified resource.

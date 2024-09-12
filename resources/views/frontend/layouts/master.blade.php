@@ -45,6 +45,9 @@
 
 @yield('content')
 
+    <!-- contact-area -->
+    @include('frontend.sections.contact')
+    <!-- contact-area-end -->
 </main>
 <!-- main-area-end -->
 

@@ -40,7 +40,7 @@ class AboutController extends Controller
                 File::delete(public_path($about->image));
             }
             $image = $request->file('image');
-            $imageName = uniqid() . '.' . $image->getClientOriginalName();
+            $imageName = uniqid() . '_' . $image->getClientOriginalName();
             $path = 'uploads/frontend_images/' . $imageName;
             $manager = new ImageManager(new Driver());
             $imageManager = $manager->read($image);

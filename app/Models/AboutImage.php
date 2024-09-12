@@ -11,5 +11,6 @@ class AboutImage extends Model
     protected $table = 'about_images';
     protected $fillable = [
         'image',
+        'created_at'
     ];
 }

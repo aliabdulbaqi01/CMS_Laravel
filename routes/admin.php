@@ -40,7 +40,7 @@ Route::put('/slides/{slide}', [SliderController::class, 'update'])->name('slides
 
 // about
 Route::get('/abouts/edit',[AboutController::class, 'edit'])->name('abouts.edit');
-Route::put('/abouts/{about}', [AboutController::class, 'update'])->name('abouts.update');
+Route::put('/abouts/{about}', [AboutController::class, 'update'])->name('abouts.upda te');
 
 // about image
 Route::resource('about/images', AboutImageController::class)->only(['store', 'create',]);

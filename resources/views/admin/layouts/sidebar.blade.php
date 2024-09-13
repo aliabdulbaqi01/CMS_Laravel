@@ -53,7 +53,6 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('admin.portfolios.index')}}">Portfolio data</a></li>
-                        <li><a href="{{route('admin.portfolios.create')}}">Add new portfolio</a></li>
                     </ul>
                 </li>
                 <li>
@@ -63,6 +62,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('admin.blog.categories.index')}}">Blog Categories</a></li>
+                        <li><a href="{{route('admin.blogs.index')}}">Blogs post</a></li>
                     </ul>
                 </li>
 

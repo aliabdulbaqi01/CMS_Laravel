@@ -26,7 +26,10 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h4 class="card-title">Portfolio All Data </h4>
+                    <div >
+                        <h4 class="card-title col-6 " style="display:inline">All blog Categories </h4>
+                        <a href="{{route('admin.portfolios.create')}}" class=" btn btn-info waves-effect waves-light mb-3" style="float: right" >add new Category</a>
+                    </div>
 
 
                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">

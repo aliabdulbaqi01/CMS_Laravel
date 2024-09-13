@@ -3,6 +3,7 @@
 use App\Http\Controllers\backend\AboutController;
 use App\Http\Controllers\Backend\AboutImageController;
 use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\BlogCategoryController;
 use App\Http\Controllers\Backend\PasswordController;
 use App\Http\Controllers\backend\PortfolioController;
 use App\Http\Controllers\Backend\ProfileController;
@@ -47,3 +48,6 @@ Route::resource('about/images', AboutImageController::class)->only(['store', 'cr
 
 // portfolio
 Route::resource('/portfolios', PortfolioController::class)->except('show');
+
+// portfolio
+Route::as('.blog')->prefix('blog')->resource('categories', BlogCategoryController::class)->except('show');

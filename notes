@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // lesson 1
     - blog model and migration
     - migration
@@ -6,6 +7,18 @@
         - image
         - tags
         - description => text
+=======
+// migration
+// model
+// controller  =>
+    - index
+    - create
+    - store
+    - edit
+// routes
+// view
+// add in sidebar
+>>>>>>> 359e64146ed05e30ac6aa35e9d5464d12f51c3d5
 
 // lesson 2 && 3
     - sidebar

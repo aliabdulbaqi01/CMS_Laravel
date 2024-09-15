@@ -65,6 +65,16 @@
                         <li><a href="{{route('admin.blogs.index')}}">Blogs post</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Contact Messages</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('admin.contact.index')}}">Contact Messages</a></li>
+
+                    </ul>
+                </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

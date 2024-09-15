@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\AboutImageController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\BlogCategoryController;
 use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\FooterController;
 use App\Http\Controllers\Backend\PasswordController;
 use App\Http\Controllers\backend\PortfolioController;
@@ -60,3 +61,6 @@ Route::resource('blogs', BlogController::class)->except('show');
 // Footer
 Route::get('/footer', [FooterController::class, 'edit'])->name('footer.edit');
 Route::put('/footer/{footer}/update', [FooterController::class, 'update'])->name('footer.update');
+
+// Contact
+Route::resource('contact', ContactController::class)->only('index','show');

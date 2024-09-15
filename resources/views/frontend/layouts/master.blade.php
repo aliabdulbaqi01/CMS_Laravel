@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/assets/img/favicon.png')}}">
-    <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
@@ -20,6 +19,11 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
 
+    {{--    toaster CSS--}}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+
+    {{--    CSS for specific file --}}
     @stack('css')
 </head>
 <body>
@@ -74,13 +78,20 @@
 <script src="{{asset('frontend/assets/js/plugins.js')}}"></script>
 <script src="{{asset('frontend/assets/js/main.js')}}"></script>
 
-@stack('js')
+{{-- toaster Js--}}
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-{{-- toastr showing all error  --}}
 @if($errors->any())
     @foreach($errors->all() as $error)
-        {{toastr()->error($error)}}
+        @php
+            toastr()->error($error)
+        @endphp
     @endforeach
 @endif
+
+
+{{-- Js for specific files --}}
+@stack('js')
+
 </body>
 </html>

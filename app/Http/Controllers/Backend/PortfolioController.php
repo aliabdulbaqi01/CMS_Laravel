@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\portfolioRequest;
+use App\Models\Footer;
 use App\Models\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -59,7 +60,9 @@ class PortfolioController extends Controller
      */
     public function show(Portfolio $portfolio) {
 
-        return view('frontend.portfolio_detail', compact('portfolio'));
+        $footerData = Footer::get()->first();
+
+        return view('frontend.portfolio_detail', compact('portfolio', 'footerData'));
     }
 
 
@@ -68,9 +71,9 @@ class PortfolioController extends Controller
      */
     public function edit(Portfolio $portfolio)
     {
-
         return view('admin.pages.portfolio.edit', compact('portfolio'));
     }
+
 
     /**
      * Update the specified resource in storage.

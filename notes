@@ -1,54 +1,24 @@
-<<<<<<< HEAD
-// lesson 1
-    - blog model and migration
-    - migration
-        - category_id => foreign key
-        - title
-        - image
-        - tags
-        - description => text
-=======
-// migration
-// model
-// controller  =>
-    - index
-    - create
-    - store
+// Footer
+
+migration and model
+    - phone
+    - description => text
+    - address => string
+    - email => string
+    - facebook
+    - twitter
+    - copyright
+    - all columns are nullable
+
+footer routes
+    - resources route => edit, update
+
+controller
     - edit
-// routes
-// view
-// add in sidebar
->>>>>>> 359e64146ed05e30ac6aa35e9d5464d12f51c3d5
+    - update
 
-// lesson 2 && 3
-    - sidebar
-    - BlogController
-        - index
-        - create
-            - pass $categories => BlogCategory::orderBy('name', 'ASC')->get()
-    - view
-        - index
-        - create
-            - tags should have tags input
-            - css and js of tags input bootstrap and set some style
-            - in option value pass by id
-        - edit
 
-    model
-    - create relationship
 
-Note:
-    - shift + tap => to get it left
+steps that i will follow
 
-// lesson 4
-for store
-    - BlogRequest for validation
-    - resize(430,  327)
 
-// lesson 5
-    - model
-        - category()
-            - return $this->belongsTo(BlogCategory::class, 'category_id', 'id'
-
-// lesson 6 & 7
-     - edit, update, destroy

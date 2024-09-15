@@ -13,10 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([
-            SlideSeeder::class,
-            AboutsSeeder::class,
-        ]);
+        $this->call(FooterSeeder::class);
+
+//        $this->call([
+//            SlideSeeder::class,
+//            AboutsSeeder::class,
+//        ]);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

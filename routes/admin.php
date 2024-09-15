@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\AboutImageController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\BlogCategoryController;
 use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\FooterController;
 use App\Http\Controllers\Backend\PasswordController;
 use App\Http\Controllers\backend\PortfolioController;
 use App\Http\Controllers\Backend\ProfileController;
@@ -53,5 +54,9 @@ Route::resource('/portfolios', PortfolioController::class)->except('show');
 // portfolio
 Route::as('.blog')->prefix('blog')->resource('categories', BlogCategoryController::class)->except('show');
 
-// admin
+// Blog
 Route::resource('blogs', BlogController::class)->except('show');
+
+// Footer
+Route::get('/footer', [FooterController::class, 'edit'])->name('footer.edit');
+Route::put('/footer/{footer}/update', [FooterController::class, 'update'])->name('footer.update');

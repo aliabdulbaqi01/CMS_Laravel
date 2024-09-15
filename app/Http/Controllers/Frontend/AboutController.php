@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\About;
+use App\Models\Footer;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -13,7 +14,8 @@ class AboutController extends Controller
      */
     public function index() {
         $about = About::get()->first();
-        return view('frontend.about', compact('about'));
+        $footerData = Footer::get()->first();
+        return view('frontend.about', compact('about', 'footerData'));
 
     }
 }

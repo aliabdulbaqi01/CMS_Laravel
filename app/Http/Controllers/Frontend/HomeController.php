@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\About;
+use App\Models\Footer;
 use App\Models\Portfolio;
 use App\Models\Slide;
 use Illuminate\Http\Request;
@@ -17,6 +18,8 @@ class HomeController extends Controller
         $slide = Slide::find(1);
         $about = About::find(1);
         $portfolios = Portfolio::get();
-        return view('frontend.index', compact('slide', 'about', 'portfolios'));
+        $footerData = Footer::get()->first();
+
+        return view('frontend.index', compact('slide', 'about', 'portfolios', 'footerData'));
     }
 }

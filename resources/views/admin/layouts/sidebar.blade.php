@@ -126,6 +126,15 @@
                         <li><a href="pages-500.html">Error 500</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-profile-line"></i>
+                        <span>Footer Setup</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('admin.footer.edit')}}">Footer Setup</a></li>
+                    </ul>
+                </li>
 
 
             </ul>

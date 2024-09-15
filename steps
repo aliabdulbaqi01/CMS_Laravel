@@ -1,3 +1,5 @@
+// view
+// routes
 // migration
 // model
 // controller  =>
@@ -5,7 +7,8 @@
     - create
     - store
     - edit
-// routes
-// view
+
+additional
+// show in the page
 // add in sidebar
 

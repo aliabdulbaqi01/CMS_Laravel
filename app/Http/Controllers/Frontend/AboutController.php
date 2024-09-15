@@ -15,7 +15,7 @@ class AboutController extends Controller
     public function index() {
         $about = About::get()->first();
         $footerData = Footer::get()->first();
-        return view('frontend.about', compact('about', 'footerData'));
+        return view('frontend.about', compact('about', 'footerData' ));
 
     }
 }

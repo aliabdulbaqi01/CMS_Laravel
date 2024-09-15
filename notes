@@ -1,40 +1,5 @@
-// contact
-
-route (web.php)
-- contact.me => contact page
-
-migration
-    - name
-    - email
-    - subject
-    - phone
-    - message => text
-    - state
-    all could be null
-
-controller (Frontend/contact)
-    - index => return view
-    - store => insert the data into the table
-
-Request
-    - for valicdation
-
-Note:
-- add toastr to the frontend
-
-
-// in the backend
-route:
-    - to show all the messages
-sidebar
-    - add contact message field
-view
-    - index
-        - with the data {{ Carbon\Carbon::parse($item->created_at)->diffForHumans() }}
-    - show
-
-
-
-how I will move with this
-// Back end
-
+Portfolio
+    - portfolio routes (create and add it in the deader
+        - return view
+        - pass Portfolio::latest()->get()
+    - added the route in the header

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
 use App\Models\Footer;
+use Illuminate\Support\Facades\Route;
 
 class ContactController extends Controller
 {
@@ -15,7 +16,9 @@ class ContactController extends Controller
     public function index()
     {
         $footerData = Footer::get()->first();
-        return view('frontend.contact', compact('footerData'));
+        $route = Route::currentRouteName();
+
+        return view('frontend.contact', compact('footerData', 'route'));
     }
 
     /**

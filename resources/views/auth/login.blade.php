@@ -43,7 +43,7 @@
                         @csrf
                         <div class="form-group mb-3 row">
                             <div class="col-12">
-                                <input id="username" class="form-control" type="text" name="username" required="" placeholder="Username" value="{{old('username')}}">
+                                <input id="login" class="form-control" type="text" name="login" required="" placeholder="Username Or Email" value="{{old('login')}}">
                             </div>
                         </div>
 

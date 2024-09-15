@@ -1,5 +1,8 @@
-Portfolio
-    - portfolio routes (create and add it in the deader
-        - return view
-        - pass Portfolio::latest()->get()
-    - added the route in the header
+
+register
+    - add field for phone in the view
+    - add what is necessary in the controller
+
+login
+    - first field should be login instead if email
+    - login request

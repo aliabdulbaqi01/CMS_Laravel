@@ -1,9 +1,8 @@
 <?php
 
-use App\Http\Controllers\Content\PortfolioController;
-use App\Http\Controllers\Frontend\AboutController;
-use App\Http\Controllers\Frontend\ContactController;
-use App\Http\Controllers\Frontend\HomeController;
+
+use App\Http\Controllers\PointOfSale\EmployeeController;
+use App\Http\Controllers\PointOFSale\PointController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+// dashboard
+Route::get('/', [PointController::class, 'index'])->name('index');
+
+// employee
+Route::resource('/employees', EmployeeController::class);
 
 
 

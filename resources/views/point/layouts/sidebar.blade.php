@@ -28,53 +28,12 @@
 
 
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                    <a href="{{route('point.employees.index')}}" class="waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Home Slide Setup</span>
+                        <span>Employee</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.slides.edit')}}">Home Slide</a></li>
-                    </ul>
                 </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>About Page Setup</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.abouts.edit')}}">About Page</a></li>
-                        <li><a href="{{route('admin.images.create')}}">About Images</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Portfolio page set up</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.portfolios.index')}}">Portfolio data</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Blog</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.blog.categories.index')}}">Blog Categories</a></li>
-                        <li><a href="{{route('admin.blogs.index')}}">Blogs post</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Contact Messages</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.contact.index')}}">Contact Messages</a></li>
 
-                    </ul>
-                </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

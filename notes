@@ -1,8 +1,53 @@
+//employee Management
 
-register
-    - add field for phone in the view
-    - add what is necessary in the controller
+employee controller
 
-login
-    - first field should be login instead if email
-    - login request
+employee migration and model
+    - name
+    - email => unique
+    - phone
+    - address
+    - experience
+    - image
+    - salary
+    - vacation
+    - city
+
+sidebar
+    - add Employee field (employee management)
+
+Route
+    - resource => employees
+
+view
+    - index
+        - show all the data in a table ( you can get the table from the view)
+        - table => id, image (50, 40), email, phone, salary, action
+    - create
+        -
+
+packages:
+    - intervention package
+
+
+Controller
+    - store
+        - validation   //email => unique:employees
+        - store image if it exit  // hexdec(uniqid()) . extention  // size (300, 300)
+        - insert
+        -
+    - edite and store
+
+Advanced:
+    - do a custom message in the validation
+
+steps
+1) migration
+2) model
+3) controller
+4) route
+5) view
+6) sidebar
+7)
+
+

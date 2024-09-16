@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+@extends('point.layouts.master')
 @section('title')
     Point Of Sale
 @endsection

@@ -47,10 +47,10 @@
 <div id="layout-wrapper">
 
 
-    @include('admin.layouts.header')
+    @include('point.layouts.header')
 
     <!-- ========== Left Sidebar Start ========== -->
-    @include('admin.layouts.sidebar')
+    @include('point.layouts.sidebar')
     <!-- Left Sidebar End -->
 
 
@@ -69,7 +69,7 @@
         </div>
         <!-- End Page-content -->
 
-        @include('admin.layouts.footer')
+        @include('point.layouts.footer')
 
     </div>
     <!-- end main content-->

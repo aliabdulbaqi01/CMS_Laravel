@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const Dashboard = '/admin/dashboard';
+    public const Dashboard = '/content/dashboard';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
@@ -35,9 +35,15 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/web.php'));
 
             Route::middleware(['web', 'auth', 'verified'])
-                ->prefix('admin')
+                ->prefix('content')
                 ->as('admin.')
-                ->group(base_path('routes/admin.php'));
+                ->group(base_path('routes/content.php'));
+
+            // for point of sale
+            Route::middleware(['web', 'auth', 'verified'])
+                ->prefix('point')
+                ->as('point.')
+                ->group(base_path('routes/point.php'));
         });
     }
 

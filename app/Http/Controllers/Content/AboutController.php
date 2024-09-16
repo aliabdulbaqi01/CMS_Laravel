@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Content;
 
 use App\Http\Controllers\Controller;
 use App\Models\About;
@@ -11,15 +11,6 @@ use Intervention\Image\Drivers\Gd\Driver;
 
 class AboutController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-
 
     /**
      * Show the form for editing the specified resource.

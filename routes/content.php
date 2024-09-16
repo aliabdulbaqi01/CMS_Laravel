@@ -1,16 +1,16 @@
 <?php
 
-use App\Http\Controllers\backend\AboutController;
-use App\Http\Controllers\Backend\AboutImageController;
-use App\Http\Controllers\Backend\AdminController;
-use App\Http\Controllers\Backend\BlogCategoryController;
-use App\Http\Controllers\Backend\BlogController;
-use App\Http\Controllers\Backend\ContactController;
-use App\Http\Controllers\Backend\FooterController;
-use App\Http\Controllers\Backend\PasswordController;
-use App\Http\Controllers\backend\PortfolioController;
-use App\Http\Controllers\Backend\ProfileController;
-use App\Http\Controllers\Backend\SliderController;
+use App\Http\Controllers\Content\AboutController;
+use App\Http\Controllers\Content\AboutImageController;
+use App\Http\Controllers\Content\AdminController;
+use App\Http\Controllers\Content\BlogCategoryController;
+use App\Http\Controllers\Content\BlogController;
+use App\Http\Controllers\Content\ContactController;
+use App\Http\Controllers\Content\FooterController;
+use App\Http\Controllers\Content\PasswordController;
+use App\Http\Controllers\Content\PortfolioController;
+use App\Http\Controllers\Content\ProfileController;
+use App\Http\Controllers\Content\SliderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,7 +44,7 @@ Route::put('/slides/{slide}', [SliderController::class, 'update'])->name('slides
 
 // about
 Route::get('/abouts/edit',[AboutController::class, 'edit'])->name('abouts.edit');
-Route::put('/abouts/{about}', [AboutController::class, 'update'])->name('abouts.upda te');
+Route::put('/abouts/{about}', [AboutController::class, 'update'])->name('abouts.update');
 
 // about image
 Route::resource('about/images', AboutImageController::class)->only(['store', 'create',]);

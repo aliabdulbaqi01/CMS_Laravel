@@ -17,16 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Homecontroller::class, 'index'])->name('home');
-Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get('/services', [ContactController::class, 'index'])->name('services');
-
-Route::get('/portfolio/detail/{portfolio}', [PortfolioController::class, 'show'])->name('portfolio.detail');
-
-// contact page and store functionality
-Route::get('/contact', [ContactController::class, 'index'])->name('contact');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 
 
-require __DIR__.'/auth.php';

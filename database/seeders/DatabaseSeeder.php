@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Http\Controllers\Backend\SliderController;
+use App\Http\Controllers\Content\SliderController;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
